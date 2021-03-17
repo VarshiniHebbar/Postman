@@ -1,0 +1,124 @@
+{
+	"info": {
+		"_postman_id": "5cd27742-5d60-4ca9-8389-f98c3fe89106",
+		"name": "GitHub",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Github Get",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.github.com/users/VarshiniHebbar/repos",
+					"protocol": "https",
+					"host": [
+						"api",
+						"github",
+						"com"
+					],
+					"path": [
+						"users",
+						"VarshiniHebbar",
+						"repos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Github Post",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "token fd24cf51ed8551463b2e413e276644afd0afe08c",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Postman\",\r\n    \"desription\": \"Test Repo\",\r\n    \"homepage\": \"https://github.com/\",\r\n    \"private\": false,\r\n    \"has_issues\": true,\r\n    \"has_projects\": true,\r\n    \"has_wiki\": true\r\n}"
+				},
+				"url": {
+					"raw": "https://api.github.com/user/repos",
+					"protocol": "https",
+					"host": [
+						"api",
+						"github",
+						"com"
+					],
+					"path": [
+						"user",
+						"repos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Github Patch",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "fd24cf51ed8551463b2e413e276644afd0afe08c",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "token fd24cf51ed8551463b2e413e276644afd0afe08c",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Postman2\",\r\n    \"desription\": \"Test Repo\",\r\n    \"homepage\": \"https://github.com/\",\r\n    \"private\": false,\r\n    \"has_issues\": true,\r\n    \"has_projects\": true,\r\n    \"has_wiki\": true\r\n}\r\n"
+				},
+				"url": {
+					"raw": "https://api.github.com/repos/VarshiniHebbar/Postman2",
+					"protocol": "https",
+					"host": [
+						"api",
+						"github",
+						"com"
+					],
+					"path": [
+						"repos",
+						"VarshiniHebbar",
+						"Postman2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Del Request",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": null
+			},
+			"response": []
+		}
+	]
+}
